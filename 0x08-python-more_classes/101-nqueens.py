@@ -2,8 +2,11 @@
 
 """Solves the N-queens puzzle.
 
-by determining all possible solutions to placing N
-N non-attacking queens on an NxN chessboard
+Determines all possible solutions to placing N
+N non-attacking queens on an NxN chessboard.
+
+Example:
+    $ ./101-nqueens.py N
 
 N must be an integer greater than or equal to 4.
 
@@ -45,9 +48,13 @@ def get_solution(board):
 
 
 def xout(board, row, col):
-    """X spots on a chessboard.
+    """X out spots on a chessboard.
+
+    All spots where non-attacking queens can no
+    longer be played are X-ed out.
+
     Args:
-        board (list): The current active chessboard.
+        board (list): The current working chessboard.
         row (int): The row where a queen was last played.
         col (int): The column where a queen was last played.
     """
